@@ -1,0 +1,68 @@
+@model User
+
+<h1>Dojo Activity Center</h1> Welcome @Model.Firstname! 
+<a href="/logout">Logout</a>
+
+  <table>
+    <tr>
+      <th>Activity</th>
+      <th>Date and Time</th>
+      <th>Duration</th>
+      <th>Even Coordinator</th>
+      <th>Number of Participants</th> 
+      <th>Action</th>
+      
+    </tr>
+    @foreach (var list in @ViewBag.Activities)
+    {
+        <tr>
+            <td><a href="/@list.ActivityId">@list.Title</a></td>
+            <td>@list.DateTime</td>
+            <td>@list.Duration @list.Unit</td> 
+            <td>@list.Creator.Firstname</td>
+            <td>@list.participants.Count</td>
+            <td>
+                @if (@list.Creator.UserId == @Model.UserId)
+                {
+                  <form asp-action="Delete" method="POST">
+                    <input type="hidden" name="ActivityId" value="@list.ActivityId">
+                    <input type="submit" class="btn btn-link" value="Delete">
+                  </form>
+                }
+                else if (@list.participants.Count != 0)
+                {
+                  var count = 0;
+                  @foreach (var part in @list.participants)
+                  {
+                    @if (@part.UserId==@Model.UserId)
+                    {
+                        <form asp-action="Leave" method="POST">
+                            <input type="hidden" name="ActivityId" value="@list.ActivityId">
+                            <input type="submit" class="btn btn-link" value="Leave">
+                        </form>                   
+                    }
+                    else if (count==@list.participants.Count-1) 
+                    {
+                        <form asp-action="Join" method="POST">
+                            <input type="hidden" name="ActivityId" value="@list.ActivityId">
+                            <input type="submit" class="btn btn-link" value="Join">
+                        </form>  
+                    }
+                    count--;
+                  }
+                }
+                else
+                {
+                    <form asp-action="Join" method="POST">
+                      <input type="hidden" name="ActivityId" value="@list.ActivityId">
+                        <input type="submit" class="btn btn-link" value="Join">
+                    </form>                   
+                }
+
+            </td>  
+        </tr>
+    }
+  </table>
+    
+
+<a href="/CreateActivity">Add New Activity!</a>

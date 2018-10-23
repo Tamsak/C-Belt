@@ -1,0 +1,11 @@
+C:\Users\Nadia\DojoCsharp\CSharpExam\bin\Debug\netcoreapp2.0\CSharpExam.deps.json
+C:\Users\Nadia\DojoCsharp\CSharpExam\bin\Debug\netcoreapp2.0\CSharpExam.runtimeconfig.json
+C:\Users\Nadia\DojoCsharp\CSharpExam\bin\Debug\netcoreapp2.0\CSharpExam.runtimeconfig.dev.json
+C:\Users\Nadia\DojoCsharp\CSharpExam\bin\Debug\netcoreapp2.0\CSharpExam.dll
+C:\Users\Nadia\DojoCsharp\CSharpExam\bin\Debug\netcoreapp2.0\CSharpExam.pdb
+C:\Users\Nadia\DojoCsharp\CSharpExam\obj\Debug\netcoreapp2.0\CSharpExam.csprojAssemblyReference.cache
+C:\Users\Nadia\DojoCsharp\CSharpExam\obj\Debug\netcoreapp2.0\CSharpExam.csproj.CoreCompileInputs.cache
+C:\Users\Nadia\DojoCsharp\CSharpExam\obj\Debug\netcoreapp2.0\CSharpExam.AssemblyInfoInputs.cache
+C:\Users\Nadia\DojoCsharp\CSharpExam\obj\Debug\netcoreapp2.0\CSharpExam.AssemblyInfo.cs
+C:\Users\Nadia\DojoCsharp\CSharpExam\obj\Debug\netcoreapp2.0\CSharpExam.dll
+C:\Users\Nadia\DojoCsharp\CSharpExam\obj\Debug\netcoreapp2.0\CSharpExam.pdb

@@ -1,0 +1,33 @@
+@model Activity
+<h1>Dojo Activity Center</h1>
+<h2>Create Activity!</h2>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <span asp-validation-for="Title"></span>
+        <label asp-for="Title"></label>
+        <input class="form-control" asp-for="Title">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="DateTime"></span>
+        <label asp-for="DateTime">Date and Time</label>
+        <input class="form-control" asp-for="DateTime">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Duration"></span>
+        <label asp-for="Duration"></label>
+        <input class="form-control" asp-for="Duration">
+    </div>
+    <div class="form-group">
+        <select class="form-control" name="Unit">
+            <option value="Days">Days</option> 
+            <option value="Hours">Hours</option> 
+            <option value="Munites">Munites</option> 
+        </select>
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"></label>
+        <input class="form-control" asp-for="Description">
+    </div>
+    <input type="submit" value="Create Activity">
+</form>

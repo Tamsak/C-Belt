@@ -1,0 +1,19 @@
+@model Activity
+<h1>Dojo Activity Center</h1>  <a href="/ActivityList">Home</a> | <a href="/logout">Logout</a>
+<h2>@Model.Title</h2>
+<ul>
+  <li>Event Coordinator : @Model.Creator.Firstname</li>
+  <li>Description: @Model.Description</li>
+   <li>Participants:</li>
+</ul> 
+<ul>
+@foreach (var part in @ViewBag.Activities)  
+{
+  <li>@part.User.Firstname</li>
+}
+</ul> 
+<form asp-action="Join" method="POST">
+    <input type="hidden" name="ActivityId" value="@Model.ActivityId">
+    <input type="submit" class="btn btn-button" value="Join">
+</form>
+
